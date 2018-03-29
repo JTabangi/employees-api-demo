@@ -9,7 +9,6 @@ import { NavComponent } from './nav.component';
 import { HomeComponent } from './home.component';
 import { EmployeesComponent } from './employees.component';
 import { PositionsComponent } from './positions.component';
-import { PagenotfoundComponent } from './pagenotfound.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 
 
@@ -21,7 +20,6 @@ import { PageNotFoundComponent } from './page-not-found.component';
     HomeComponent,
     EmployeesComponent,
     PositionsComponent,
-    PagenotfoundComponent,
     PageNotFoundComponent
   ],
   imports: [
