@@ -10,6 +10,7 @@ import { HomeComponent } from './home.component';
 import { EmployeesComponent } from './employees.component';
 import { PositionsComponent } from './positions.component';
 import { PagenotfoundComponent } from './pagenotfound.component';
+import { PageNotFoundComponent } from './page-not-found.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { PagenotfoundComponent } from './pagenotfound.component';
     HomeComponent,
     EmployeesComponent,
     PositionsComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
