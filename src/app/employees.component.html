@@ -15,10 +15,10 @@
           </thead>
           <tbody>
             <tr *ngFor="let emp of employees">
-              <td> {{emp.FirstName}} {{emp.LastName}} </td>
-              <td> {{emp.AddressStreet}}. {{emp.AddressState}}, {{emp.AddressCity}}. {{emp.AddressZip}} </td>
-              <td> {{emp.PhoneNum}} ext: {{emp.Extension}} </td>
-              <td> {{emp.HireDate | date:'longDate'}} </td>
+              <td>{{emp.FirstName}} {{emp.LastName}}</td>
+              <td>{{emp.AddressStreet}}. {{emp.AddressState}}, {{emp.AddressCity}}. {{emp.AddressZip}}</td>
+              <td>{{emp.PhoneNum}} ext: {{emp.Extension}}</td>
+              <td>{{emp.HireDate | date:'longDate'}} </td>
             </tr>
           </tbody>
         </table>
