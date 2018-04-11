@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -15,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PositionService } from './data/position.service';
 import { EmployeeService } from './data/employee.service'; 
 import { HttpClient } from '@angular/common/http/src/client';
-import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeComponent } from './employee.component';
 import { PositionComponent } from './position.component';
 
 @NgModule({
@@ -34,7 +35,8 @@ import { PositionComponent } from './position.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [PositionService, EmployeeService],
   bootstrap: [AppComponent]
