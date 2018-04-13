@@ -6,6 +6,8 @@
 *
 * Name: Johnny Tabangi Student ID: 100462167 Date: 2018-04-13
 *
+* Heroku Link: https://stark-journey-56576.herokuapp.com/home
+*
 ********************************************************************************/ 
 
 import { Component } from '@angular/core';

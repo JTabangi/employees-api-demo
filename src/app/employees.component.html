@@ -14,6 +14,7 @@
             <th> Address </th>
             <th> Phone Number </th>
             <th> Hire Date </th>
+            <th> Position Title </th>
           </thead>
           <tbody>
             <tr *ngFor="let emp of filteredEmployees" (click)="routeEmployee(emp._id)">
@@ -21,7 +22,7 @@
               <td> {{emp.AddressStreet}}. {{emp.AddressState}}, {{emp.AddressCity}}. {{emp.AddressZip}} </td>
               <td> {{emp.PhoneNum}} ext: {{emp.Extension}} </td>
               <td> {{emp.HireDate | date:'longDate'}} </td>
-              <td> {{emp.Position}}</td>
+              <td> {{emp.Position.PositionName}} </td>
             </tr>
           </tbody>
         </table>
