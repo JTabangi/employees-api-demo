@@ -10,14 +10,14 @@
             <div class="col-md-6">
               <div class="form-group" [class.has-error]="firstName.errors" >
                 <label for="FirstName" class="control-label">First Name:</label>
-                <input #firstName="ngModel" [(ngModel)]="employee.FirstName" class="form-control" id="FirstName" type="text" name="FirstName" required />
+                <input class="form-control" id="FirstName" type="text" name="FirstName" #firstName="ngModel" [(ngModel)]="employee.FirstName" required />
                 <span class="help-block" *ngIf="firstName.errors && firstName.errors.required">First name is required</span>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group" [class.has-error]="lastName.errors">
                 <label for="LastName" class="control-label">Last Name:</label>
-                <input #lastName="ngModel" [(ngModel)]="employee.LastName" class="form-control" id="LastName" type="text" name="LastName" required />
+                <input class="form-control" id="LastName" type="text" name="LastName" #lastName="ngModel" [(ngModel)]="employee.LastName" required />
                 <span class="help-block" *ngIf="lastName.errors && lastName.errors.required">Last name is required</span>
               </div>
             </div>
@@ -36,7 +36,7 @@
                 <label for="SalaryBonus" class="control-label">Salary Bonus</label>
                 <div class="input-group">
                   <span class="input-group-addon">$</span>
-                  <input #bonus="ngModel" [(ngModel)]="employee.SalaryBonus" class="form-control" id="SalaryBonus" type="text" name="SalaryBonus" pattern="\d+" required />
+                  <input class="form-control" id="SalaryBonus" type="text" name="SalaryBonus" pattern="\d+" #bonus="ngModel" [(ngModel)]="employee.SalaryBonus" required />
                 </div>
                 <span class="help-block" *ngIf="bonus.errors && bonus.errors.required">Salary bonus is required</span>
                 <span class="help-block" *ngIf="bonus.errors && bonus.errors.pattern">Salary bonus must be a number</span>
@@ -47,28 +47,28 @@
             <div class="col-md-3">
               <div class="form-group" [class.has-error]="street.errors">
                 <label for="AddressStreet" class="control-label">Address (Street):</label>
-                <input #street="ngModel" [(ngModel)]="employee.AddressStreet" class="form-control" id="AddressStreet" type="text" name="AddressStreet" required />
+                <input class="form-control" id="AddressStreet" type="text" name="AddressStreet" #street="ngModel" [(ngModel)]="employee.AddressStreet" required />
                 <span class="help-block" *ngIf="street.errors && street.errors.required">Street address is required</span>
               </div>
             </div>
             <div class="col-md-3">
               <div class="form-group" [class.has-error]="city.errors">
                 <label for="AddressCity" class="control-label">Address (City):</label>
-                <input #city="ngModel" [(ngModel)]="employee.AddressCity" class="form-control" id="AddressCity" type="text" name="AddressCity" required />
+                <input class="form-control" id="AddressCity" type="text" name="AddressCity" #city="ngModel" [(ngModel)]="employee.AddressCity" required />
                 <span class="help-block" *ngIf="city.errors && city.errors.required">City address is required</span>
               </div>
             </div>
             <div class="col-md-3">
               <div class="form-group" [class.has-error]="state.errors">
                 <label for="AddressState" class="control-label">Address (State):</label>
-                <input #state="ngModel" [(ngModel)]="employee.AddressState" class="form-control" id="AddressState" type="text" name="AddressState" required />
+                <input class="form-control" id="AddressState" type="text" name="AddressState" #state="ngModel" [(ngModel)]="employee.AddressState" required />
                 <span class="help-block" *ngIf="state.errors && state.errors.required">State address is required</span>
               </div>
             </div>
             <div class="col-md-3">
               <div class="form-group" [class.has-error]="zip.errors">
                 <label for="AddressZip" class="control-label">Address (Zip Code):</label>
-                <input #zip="ngModel" [(ngModel)]="employee.AddressZip" class="form-control" id="AddressZip" type="text" name="AddressZip" required />
+                <input class="form-control" id="AddressZip" type="text" name="AddressZip" #zip="ngModel" [(ngModel)]="employee.AddressZip" required />
                 <span class="help-block" *ngIf="zip.errors && zip.errors.required">Zip code is required</span>
               </div>
             </div>
@@ -77,8 +77,8 @@
             <div class="col-md-3">
               <div class="form-group" [class.has-error]="phone.errors">
                 <label for="PhoneNum" class="control-label">Phone Number:</label>
-                <input #phone="ngModel" [(ngModel)]="employee.PhoneNum" class="form-control" id="PhoneNum" type="text" name="PhoneNum" 
-                pattern="\+?[ ]*[1-9]?[ ]*\-?[ ]*\(?[ ]*[1-9][ ]*(\d[ ]*){2}\)?[ ]*\-?[ ]*(\d[ ]*){3}-[ ]*(\d[]*){4}" required />
+                <input class="form-control" id="PhoneNum" type="text" name="PhoneNum" pattern="\+?[ ]*[1-9]?[ ]*\-?[ ]*\(?[ ]*[1-9][ ]*(\d[ ]*){2}\)?[ ]*\-?[ ]*(\d[ ]*){3}-[ ]*(\d[]*){4}" 
+                #phone="ngModel" [(ngModel)]="employee.PhoneNum"required />
                 <span class="help-block" *ngIf="phone.errors && phone.errors.required">Phone number is required</span>
                 <span class="help-block" *ngIf="phone.errors && phone.errors.pattern">Invalid phone number</span>
               </div>
@@ -86,7 +86,7 @@
             <div class="col-md-3">
               <div class="form-group" [class.has-error]="extension.errors">
                 <label for="Extension" class="control-label">Extension:</label>
-                <input #extension="ngModel" [(ngModel)]="employee.Extension" class="form-control" id="Extension" type="text" name="Extension" pattern="\d+" required />
+                <input class="form-control" id="Extension" type="text" name="Extension" pattern="\d+" #extension="ngModel" [(ngModel)]="employee.Extension" required />
                 <span class="help-block" *ngIf="extension.errors && extension.errors.required">Extension is required</span>
                 <span class="help-block" *ngIf="extension.errors && extension.errors.pattern">Extension must be a number</span>
               </div>
