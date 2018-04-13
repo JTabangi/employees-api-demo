@@ -13,7 +13,7 @@ import { NgForm } from '@angular/forms';
 })
 export class EmployeeComponent implements OnInit {
   id: string;
-  paramSubscription: any;
+  paramSubscription: any; 
   employeeSubscription: any;
   getPositionsSubscription: any;
   saveEmployeeSubscription: any;
